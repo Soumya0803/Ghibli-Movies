@@ -1,44 +1,44 @@
 # Ghibli-Movies
-Create virtual environment
+- Create a virtual environment
 
 `python3 -m venv ghibli`  
 
-Activate the virtual environment 
+- Activate the virtual environment 
 
 `source ghibli/bin/activate`
 
-Installation
+- Installation
 
 `git clone git@github.com:Soumya0803/Ghibli-Movies.git`
 
 `cd Ghibli-Movies`
 
-Install dependencies:
+- Install dependencies:
 
 `pip install -r requirements.txt`
 
-Apply migrations:
+- Apply migrations:
 
 `python manage.py migrate`
 
-Run the development server:
+- Run the development server:
 
 `python manage.py runserver`
 
-Movies API endpoint: http://127.0.0.1:8000/movies
+- Movies API endpoint: http://127.0.0.1:8000/movies
 
-Install httpie 
 
-`https://httpie.io/docs/cli/universal`
+- Install httpie
+https://httpie.io/docs/cli/universal
 
-Get ghiblikey for authentication
+- Get ghiblikey for authentication
 
 `http post http://127.0.0.1:8000/api-token-auth/ username=test password=test`                       
 
-Get movies list with authors:
+- Get movies list with authors:
 
 `http http://127.0.0.1:8000/movie/ 'Authorization: ghiblikey GHIBLI_KEY'`
 
-Run tests
+- Run tests
 
 `python manage.py test movies.tests`
